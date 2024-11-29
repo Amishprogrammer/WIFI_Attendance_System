@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Attendance Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <form action="/run_attendance" method="POST">
+            <label for="subject">Enter Subject Name:</label>
+            <input type="text" name="subject" id="subject" required>
+            <button type="submit">Run Attendance</button>
+        </form>
+        
+        <h2>Attendance Dashboard</h2>
+        <a href="{{ url_for('add_student') }}" class="add-student-btn">Add Student</a>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                </tr>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.name }}</td>
+                    <td>{{ record.subject }}</td>
+                    <td>{{ record.date }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
