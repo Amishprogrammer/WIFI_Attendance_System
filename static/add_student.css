@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4a90e2, #9013fe); /* Gradient background for a modern look */
+    color: #333;
+    padding: 20px;
+    font-size: 16px; /* Ensures better readability */
+    transition: background-color 0.3s ease;
+}
+
+/* Container for the form */
+.form-container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow for depth */
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Hover effect for a lifted feel */
+}
+
+h2 {
+    color: #4a90e2;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #9013fe; /* Hover effect to change color */
+}
+
+h2:before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 50px;
+    margin: 0 auto 15px auto;
+    background-color: #4a90e2;
+}
+
+/* Input Field Styling */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background-color: #eef5ff;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for button */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6a11cb, #fcb125);
+    transform: scale(1.03);
+}
+
+button:active {
+    background-color: #2c5f9b;
+    transform: scale(0.98);
+}
+
+/* Flash Messages Styling */
+.flash-messages {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+}
+
+.flash-messages li {
+    padding: 12px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+}
+
+.flash-messages li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], input[type="password"], button {
+        font-size: 1rem;
+    }
+}
+
